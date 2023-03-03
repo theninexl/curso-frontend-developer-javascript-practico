@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const hamburguerIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const aside = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 //menuEmail.addEventListener('click', function(){toggleElement(desktopMenu)});
@@ -27,6 +27,7 @@ function toggleDesktopMenu() {
 }
 
 function toggleMobileMenu() {
+    
     const isAsideClosed = aside.classList.contains('inactive');
     if (!isAsideClosed) {
         aside.classList.toggle('inactive');
@@ -35,6 +36,7 @@ function toggleMobileMenu() {
 }
 
 function toggleAside() {
+    console.log("toggle aside");
     const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
     if (!isMobileMenuClosed) {
         mobileMenu.classList.toggle('inactive');
